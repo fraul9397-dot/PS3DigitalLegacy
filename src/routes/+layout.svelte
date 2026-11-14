@@ -4,7 +4,7 @@
 	import '#lib/styles/global.css';
 	import { page } from '$app/state';
 	import { onMount } from 'svelte';
-	import favicon from '#lib/assets/favicon.svg';
+	import { asset } from '$app/paths';
 	import CountdownStrip from '#lib/components/CountdownStrip.svelte';
 	import Footer from '#lib/components/Footer.svelte';
 	import Header from '#lib/components/Header.svelte';
@@ -52,7 +52,9 @@
 </script>
 
 <svelte:head>
-	<link rel="icon" href={favicon} />
+	<link rel="icon" href={asset('favicon.svg')} type="image/svg+xml" />
+	<link rel="icon" href={asset('favicon.ico')} sizes="48x48" />
+	<link rel="apple-touch-icon" href={asset('apple-touch-icon.png')} />
 	<meta name="theme-color" content="#b3201a" />
 </svelte:head>
 
